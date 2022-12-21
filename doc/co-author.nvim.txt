@@ -1,0 +1,50 @@
+TABLE OF CONTENTS                                              *co-author.nvim.toc*
+1.  Introduction               (|co-author.nvim|)
+2.  Quickstart                 (|co-author-quickstart|)
+3.  Configuration              (|co-author-config|)
+4.  Commands                   (|co-author-commands|)
+5.  Mappings                   (|co-author-mappings|)
+
+================================================================================
+INTRODUCTION                                                       *co-author.nvim*
+
+This plugin  generates a list of unique commit authors in the co-author
+format and selecting an option will add it to the commit message.
+
+================================================================================
+QUICKSTART                                                   *co-author-quickstart*
+
+If you just want to use co-author.nvim with the default settings (|co-author-config|)
+put this into the your packer startup function:
+>
+    use("2kabhishek/co-author.nvim")
+<
+
+================================================================================
+CONFIG                                                           *co-author-config*
+
+Make sure to use neovim as your commit message editor to utilize this plugin.
+
+Add the following to your shell config
+```
+export EDITOR=nvim
+```
+
+================================================================================
+COMMANDS                                                       *co-author-commands*
+
+The commands *co-authorNext* & *co-authorPrev* cycle to the next or previous buffer and
+show the context window of co-author.nvim.
+
+    Example usage:
+>
+    :GitCoAuthors
+<
+
+================================================================================
+MAPPINGS                                                       *co-author-mappings*
+
+Default keybinding for showing the list is `<leader>gA`.
+
+================================================================================
+
