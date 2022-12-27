@@ -65,8 +65,12 @@ use '2kabhishek/co-author.nvim'
 
 ## Using co-author.nvim
 
-The default keybinding is `leader<gA>`, hit this whenever you are editing a commit message and select the co-author.
-You can add your custom bindings for the command `:GitCoAuthors` to achieve the same results.
+co-author adds a new command `:GitCoAuthors`.
+You can add your custom bindings for the command `:GitCoAuthors`, the recommended keybinding is `<leader>gA`.
+
+> NOTE: By default there are no configured keybindings.
+
+check `:help co-author` for more details.
 
 ## How it was built
 

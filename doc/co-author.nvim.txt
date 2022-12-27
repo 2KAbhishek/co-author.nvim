@@ -44,7 +44,8 @@ show the context window of co-author.nvim.
 ================================================================================
 MAPPINGS                                                       *co-author-mappings*
 
-Default keybinding for showing the list is `<leader>gA`.
+Recommended keybinding for showing the list is `<leader>gA`.
+By default there are no keybindings set.
 
 ================================================================================
 
