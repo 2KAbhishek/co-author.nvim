@@ -37,7 +37,8 @@ How many times have you been working on a piece of code with someone and then wh
 Upgrade to 21st century, use this plugin to automatically fetch author details from your commit history and then add to your commit message.
 
 It shows you a list of all the unique authors in your current repo.
-co-author automatically works with telescope and presents the list in a nice fuzzy searchable UI.
+
+`co-author.nvim` automatically works with telescope and presents the list in a nice fuzzy searchable UI.
 
 ## Inspiration
 
@@ -55,7 +56,6 @@ To get co-author.nvim, add the following to your plugin list:
 
 ```lua
 -- Packer
-
 use '2kabhishek/co-author.nvim'
 
 -- Lazy
@@ -65,12 +65,13 @@ use '2kabhishek/co-author.nvim'
 
 ## Using co-author.nvim
 
-co-author adds a new command `:GitCoAuthors`.
+`co-author.nvim` adds a new command `:GitCoAuthors`.
+
 You can add your custom bindings for the command `:GitCoAuthors`, the recommended keybinding is `<leader>gA`.
 
-> NOTE: By default there are no configured keybindings.
-
 check `:help co-author` for more details.
+
+> NOTE: By default there are no configured keybindings.
 
 ## How it was built
 
