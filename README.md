@@ -32,70 +32,57 @@
 
 ## What is this
 
-co-author.nvim is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
+How many times have you been working on a piece of code with someone and then when committing you ask their full name and email address for adding a Co-author to the commit?
+
+Upgrade to 21st century, use this plugin to automatically fetch author details from your commit history and then add to your commit message.
+
+It shows you a list of all the unique authors in your current repo.
+co-author automatically works with telescope and presents the list in a nice fuzzy searchable UI.
 
 ## Inspiration
 
-co-author.nvim was inspired by `<reason/idea>`.
+Noticed something similar on a co-workers using IntelliJ, and I wanted it!
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
-- You have installed the latest version of `<coding_language/dependency/requirement_1>`
+- You have installed the latest version of `neovim`
 
-## Getting co-author.nvim
+## Installing co-author.nvim
 
-To get co-author.nvim, follow these steps:
+To get co-author.nvim, add the following to your plugin list:
 
-```bash
-git clone https://github.com/2kabhishek/co-author.nvim
-cd co-author.nvim
-<install_command>
+```lua
+-- Packer
+
+use '2kabhishek/co-author.nvim'
+
+-- Lazy
+'2kabhishek/co-author.nvim'
+
 ```
 
 ## Using co-author.nvim
 
-```bash
-USAGE:
-    command [FLAGS] [OPTIONS]
-
-FLAGS:
-    -h, --help              Prints help information.
-
-OPTIONS:
-    -o, --option <value>    Option description.
-    Options are: a, b. [default: a]
-
-Example:
-
-
-```
+The default keybinding is `leader<gA>`, hit this whenever you are editing a commit message and select the co-author.
 
 ## How it was built
 
-co-author.nvim was built using `<tech/library>`
+co-author.nvim was built using `nvim, lua`
 
 ## Challenges faced
 
-While building co-author.nvim the main challenges were `<issue/difficulty>`
+Figuring out vim's rtp was tricky initially.
 
 ## What I learned
 
-While building co-author.nvim I `<learned/accomplished>` about `<learning/accomplishment>`
+- Learned about nvim plugin ecosystem
+- Explored vim APIs
 
 ## What's next
 
-Planning to add `<feature/module>`.
-
-### To-Do
-
-- [x] Setup repo
-- [ ] Think real hard
-- [ ] Start typing
-- [ ] Change me
-- [ ] Update README
-- [ ] Finish it
+You tell me!
 
 Hit the ⭐ button if you found this useful.
 
