@@ -20,7 +20,7 @@
 <a href="https://github.com/2KAbhishek/co-author.nvim/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/2kabhishek/co-author.nvim?style=flat&color=e06c75&label="> </a>
 
-<h3>Short sweet headline with 🎇🎉</h3>
+<h3>Credit commits in style 🧑💻🪄</h3>
 
 <figure>
   <img src= "images/screenshot.png" alt="co-author.nvim Demo">
@@ -66,6 +66,7 @@ use '2kabhishek/co-author.nvim'
 ## Using co-author.nvim
 
 The default keybinding is `leader<gA>`, hit this whenever you are editing a commit message and select the co-author.
+You can add your custom bindings for the command `:GitCoAuthors` to achieve the same results.
 
 ## How it was built
 
