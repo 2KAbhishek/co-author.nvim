@@ -20,7 +20,7 @@
 <a href="https://github.com/2KAbhishek/co-author.nvim/pulse">
 <img alt="Last Updated" src="https://img.shields.io/github/last-commit/2kabhishek/co-author.nvim?style=flat&color=e06c75&label="> </a>
 
-<h3>Add commit co-authors from nvim 💻🪄</h3>
+<h3>Add commit authors from nvim 💻🪄</h3>
 
 <figure>
   <img src= "images/screenshot.png" alt="co-author.nvim Demo">
