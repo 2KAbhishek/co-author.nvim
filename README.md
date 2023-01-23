@@ -49,6 +49,8 @@ Noticed something similar on a co-workers using IntelliJ, and I wanted it!
 Before you begin, ensure you have met the following requirements:
 
 - You have installed the latest version of `neovim`
+- [dressing.nvim](https://github.com/stevearc/dressing.nvim) — for prettier select UI
+- [telescope](https://github.com/nvim-telescope/telescope.nvim) — for fuzzy searching in list
 
 ## Installing co-author.nvim
 
