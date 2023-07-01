@@ -61,7 +61,11 @@ To get co-author.nvim, add the following to your plugin list:
 use '2kabhishek/co-author.nvim'
 
 -- Lazy
-'2kabhishek/co-author.nvim'
+{
+    '2kabhishek/co-author.nvim',
+    dependencies = { 'stevearc/dressing.nvim' },
+    cmd = 'GitCoAuthors',
+},
 
 ```
 
@@ -70,6 +74,8 @@ use '2kabhishek/co-author.nvim'
 `co-author.nvim` adds a new command `:GitCoAuthors`.
 
 You can add your custom bindings for the command `:GitCoAuthors`, the recommended keybinding is `<leader>gA`.
+
+[Link to my keybinding config](https://github.com/2kabhishek/nvim2k/blob/6e09ab265caa45c0d7aaaf75ecc9c7df33cbd9f2/lua/nvim2k/plugins/which-key.lua#L213-L215)
 
 check `:help co-author` for more details.
 
