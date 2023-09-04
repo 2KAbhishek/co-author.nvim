@@ -40,6 +40,8 @@ It shows you a list of all the unique authors in your current repo.
 
 `co-author.nvim` automatically works with telescope and presents the list in a nice fuzzy searchable UI.
 
+Here's a [demo video](https://youtu.be/mBLLyOLwSf4?si=2Bdw900ROLp63LEg) for a quick walkthrough.
+
 ## Inspiration
 
 Noticed something similar on a co-workers using IntelliJ, and I wanted it!
