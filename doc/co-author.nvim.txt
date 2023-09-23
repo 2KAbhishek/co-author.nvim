@@ -41,8 +41,7 @@ export EDITOR=nvim
 ================================================================================
 COMMANDS                                                       *co-author-commands*
 
-The commands *co-authorNext* & *co-authorPrev* cycle to the next or previous buffer and
-show the context window of co-author.nvim.
+The command GitCoAuthors shows the list of unique commit authors in a list.
 
     Example usage:
 >
@@ -52,7 +51,7 @@ show the context window of co-author.nvim.
 ================================================================================
 MAPPINGS                                                       *co-author-mappings*
 
-Recommended keybinding for showing the list is `<leader>gC`.
+Recommended keybinding for showing the author list is `<leader>gC`.
 By default there are no keybindings set.
 
 ================================================================================
