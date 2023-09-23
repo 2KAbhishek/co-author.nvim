@@ -32,11 +32,11 @@
 
 ## What is this
 
-How many times have you been working on a piece of code with someone and then when committing you ask their full name and email address for adding a Co-author to the commit?
+How many times have you been pairing on a feature and then when committing you had to manually paste their details for adding a Co-author to the commit?
 
-Upgrade to 21st century, use this plugin to automatically fetch author details from your commit history and then add to your commit message.
+This plugin automatically fetches author details from the repo's commit history and then adds it to your commit message.
 
-It shows you a list of all the unique authors in your current repo.
+It shows you a list of all the unique authors in your current repo on a nice fuzzy searchable list.
 
 `co-author.nvim` automatically works with telescope and presents the list in a nice fuzzy searchable UI.
 
@@ -59,9 +59,6 @@ Before you begin, ensure you have met the following requirements:
 To get co-author.nvim, add the following to your plugin list:
 
 ```lua
--- Packer
-use '2kabhishek/co-author.nvim'
-
 -- Lazy
 {
     '2kabhishek/co-author.nvim',
@@ -69,15 +66,16 @@ use '2kabhishek/co-author.nvim'
     cmd = 'GitCoAuthors',
 },
 
+-- Packer
+use '2kabhishek/co-author.nvim'
+
 ```
 
 ## Using co-author.nvim
 
 `co-author.nvim` adds a new command `:GitCoAuthors`.
 
-You can add your custom bindings for the command `:GitCoAuthors`, the recommended keybinding is `<leader>gA`.
-
-[Link to my keybinding config](https://github.com/2kabhishek/nvim2k/blob/6e09ab265caa45c0d7aaaf75ecc9c7df33cbd9f2/lua/nvim2k/plugins/which-key.lua#L213-L215)
+You can add your custom bindings for the command `:GitCoAuthors`, the recommended keybinding is `<leader>gC`.
 
 check `:help co-author` for more details.
 

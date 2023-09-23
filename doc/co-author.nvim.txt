@@ -14,10 +14,18 @@ format and selecting an option will add it to the commit message.
 ================================================================================
 QUICKSTART                                                   *co-author-quickstart*
 
-If you just want to use co-author.nvim with the default settings (|co-author-config|)
-put this into the your packer startup function:
+Add the following to you lazy/packer config
+
 >
-    use("2kabhishek/co-author.nvim")
+    -- Lazy
+    {
+        '2kabhishek/co-author.nvim',
+        dependencies = { 'stevearc/dressing.nvim' },
+        cmd = 'GitCoAuthors',
+    },
+
+    -- Packer
+    use '2kabhishek/co-author.nvim'
 <
 
 ================================================================================
@@ -44,7 +52,7 @@ show the context window of co-author.nvim.
 ================================================================================
 MAPPINGS                                                       *co-author-mappings*
 
-Recommended keybinding for showing the list is `<leader>gA`.
+Recommended keybinding for showing the list is `<leader>gC`.
 By default there are no keybindings set.
 
 ================================================================================
