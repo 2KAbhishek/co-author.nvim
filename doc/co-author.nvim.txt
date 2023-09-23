@@ -51,7 +51,7 @@ The command GitCoAuthors shows the list of unique commit authors in a list.
 ================================================================================
 MAPPINGS                                                       *co-author-mappings*
 
-Recommended keybinding for showing the author list is `<leader>gC`.
+Recommended keybinding for showing the author list is `<leader>gC`
 By default there are no keybindings set.
 
 ================================================================================
