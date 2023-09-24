@@ -20,7 +20,10 @@ Add the following to you lazy/packer config
     -- Lazy
     {
         '2kabhishek/co-author.nvim',
-        dependencies = { 'stevearc/dressing.nvim' },
+        dependencies = {
+            'stevearc/dressing.nvim',
+            'nvim-telescope/telescope.nvim',
+        },
         cmd = 'GitCoAuthors',
     },
 
@@ -41,7 +44,7 @@ export EDITOR=nvim
 ================================================================================
 COMMANDS                                                       *co-author-commands*
 
-The command GitCoAuthors shows the list of unique commit authors in a list.
+The command GitCoAuthors shows the list of unique commit author names and emails.
 
     Example usage:
 >

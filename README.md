@@ -51,6 +51,9 @@ Noticed something similar on a co-workers using IntelliJ, and I wanted it!
 Before you begin, ensure you have met the following requirements:
 
 - You have installed the latest version of `neovim`
+
+These two plugins are optional but highly recommended for a smoother user experience.
+
 - [dressing.nvim](https://github.com/stevearc/dressing.nvim) — for prettier select UI
 - [telescope](https://github.com/nvim-telescope/telescope.nvim) — for fuzzy searching in list
 
@@ -62,7 +65,10 @@ To get co-author.nvim, add the following to your plugin list:
 -- Lazy
 {
     '2kabhishek/co-author.nvim',
-    dependencies = { 'stevearc/dressing.nvim' },
+    dependencies = {
+        'stevearc/dressing.nvim',
+        'nvim-telescope/telescope.nvim',
+    },
     cmd = 'GitCoAuthors',
 },
 
