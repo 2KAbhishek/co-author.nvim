@@ -26,7 +26,7 @@ co_author.list = function()
             end
             local string = 'Co-authored-by: ' .. item
             local cursor_position = vim.api.nvim_win_get_cursor(0)
-            local line = cursor_position[1]
+            local line = cursor_position[1] + 1
             local column = cursor_position[2]
 
             vim.api.nvim_buf_set_lines(0, line, line, true, { string })
