@@ -69,7 +69,7 @@ To get co-author.nvim, add the following to your plugin list:
         'stevearc/dressing.nvim',
         'nvim-telescope/telescope.nvim',
     },
-    cmd = {'GitCoAuthors', 'CoAuthor'},
+    cmd = {'CoAuthor'},
 },
 
 -- Packer
@@ -79,9 +79,9 @@ use '2kabhishek/co-author.nvim'
 
 ## Using co-author.nvim
 
-`co-author.nvim` adds two new commands `:GitCoAuthors`, and a shorter alias `:CoAuthor`.
+`co-author.nvim` adds two new commands `:CoAuthor`, and a legacy alias `:GitCoAuthors`.
 
-You can add your custom bindings for the command `:GitCoAuthors`, the recommended keybinding is `<leader>gC`.
+You can add your custom bindings for the command `:CoAuthor`, the recommended keybinding is `<leader>gC`.
 
 check `:help co-author` for more details.
 
