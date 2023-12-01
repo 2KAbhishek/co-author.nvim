@@ -44,11 +44,12 @@ export EDITOR=nvim
 ================================================================================
 COMMANDS                                                       *co-author-commands*
 
-The command GitCoAuthors shows the list of unique commit author names and emails.
+The command GitCoAuthors or CoAuthor shows the list of unique commit author names and emails.
 
     Example usage:
 >
     :GitCoAuthors
+    :CoAuthor
 <
 
 ================================================================================
