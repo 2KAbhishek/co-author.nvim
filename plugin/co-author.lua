@@ -4,6 +4,10 @@ end
 
 vim.g.loaded_co_author = true
 
-vim.cmd('command! CoAuthor lua require("co-author").list()')
-vim.cmd('command! GitCoAuthors lua require("co-author").list()')
+vim.api.nvim_create_user_command('CoAuthor', function()
+    require("co-author").list()
+end, {})
 
+vim.api.nvim_create_user_command('GitCoAuthors', function()
+    require("co-author").list()
+end, {})
