@@ -1,8 +1,7 @@
 local co_author = {}
 
 co_author.generate = function()
-    local output = vim.api.nvim_call_function('system', { 'git log --format="%aN <%aE>"' })
-    local co_authors = vim.split(output, '\n')
+    local co_authors = vim.fn.systemlist('git log --format="%aN <%aE>"')
     local unique_co_authors = {}
     for _, author in ipairs(co_authors) do
         if not unique_co_authors[author] then
@@ -20,17 +19,16 @@ co_author.list = function()
         items[#items + 1] = author
     end
     if #co_authors > 0 then
-        vim.ui.select(items, { prompt = 'Select Co-Authors' }, function(item, _)
-            if not item then
-                return
-            end
-            local string = 'Co-authored-by: ' .. item
-            local cursor_position = vim.api.nvim_win_get_cursor(0)
-            local line = cursor_position[1] + 1
-            local column = cursor_position[2]
+        vim.ui.select(items, { prompt = 'Select Co-Author' }, function(item, _)
+            if item ~= nil then
+                local string = 'Co-authored-by: ' .. item
+                local cursor_position = vim.api.nvim_win_get_cursor(0)
+                local line = cursor_position[1] + 1
+                local column = cursor_position[2]
 
-            vim.api.nvim_buf_set_lines(0, line, line, true, { string })
-            vim.api.nvim_win_set_cursor(0, { line, column + #string })
+                vim.api.nvim_buf_set_lines(0, line, line, true, { string })
+                vim.api.nvim_win_set_cursor(0, { line, column + #string })
+            end
         end)
     end
 end

@@ -79,7 +79,7 @@ use '2kabhishek/co-author.nvim'
 
 ## Using co-author.nvim
 
-`co-author.nvim` adds two new commands `:CoAuthor`, and a legacy alias `:GitCoAuthors`.
+`co-author.nvim` adds a `:CoAuthor` command that will show you the list of unique co authors who have already contributed to the current git repo.
 
 You can add your custom bindings for the command `:CoAuthor`, the recommended keybinding is `<leader>gC`.
 
