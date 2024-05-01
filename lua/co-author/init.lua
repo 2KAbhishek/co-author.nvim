@@ -22,9 +22,7 @@ co_author.list = function()
         vim.ui.select(items, { prompt = 'Select Co-Author' }, function(item, _)
             if item ~= nil then
                 local string = 'Co-authored-by: ' .. item
-                local cursor_position = vim.api.nvim_win_get_cursor(0)
-                local line = cursor_position[1] + 1
-                local column = cursor_position[2]
+                local line, column = unpack(vim.api.nvim_win_get_cursor(0))
 
                 vim.api.nvim_buf_set_lines(0, line, line, true, { string })
                 vim.api.nvim_win_set_cursor(0, { line, column + #string })
