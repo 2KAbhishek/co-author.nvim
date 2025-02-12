@@ -1,22 +1,61 @@
-TABLE OF CONTENTS                                              *co-author.nvim.toc*
-1.  Introduction               (|co-author.nvim|)
-2.  Quickstart                 (|co-author-quickstart|)
-3.  Configuration              (|co-author-config|)
-4.  Commands                   (|co-author-commands|)
-5.  Mappings                   (|co-author-mappings|)
+*co-author.txt*        For Neovim >= 0.8.0       Last change: 2025 February 12
 
-================================================================================
-INTRODUCTION                                                       *co-author.nvim*
+==============================================================================
+Table of Contents                                *co-author-table-of-contents*
 
-This plugin  generates a list of unique commit authors in the co-author
-format and selecting an option will add it to the commit message.
+  - What is this                                      |co-author-what-is-this|
+  - Inspiration                                        |co-author-inspiration|
+  - Prerequisites                                    |co-author-prerequisites|
+  - Installing co-author.nvim            |co-author-installing-co-author.nvim|
+  - Using co-author.nvim                      |co-author-using-co-author.nvim|
+  - How it was built                              |co-author-how-it-was-built|
+  - Challenges faced                              |co-author-challenges-faced|
+  - What I learned                                  |co-author-what-i-learned|
+  - What’s next                                    |co-author-what’s-next|
+  - More Info                                            |co-author-more-info|
 
-================================================================================
-QUICKSTART                                                   *co-author-quickstart*
 
-Add the following to you lazy/packer config
+WHAT IS THIS                                          *co-author-what-is-this*
 
->
+How many times have you been pairing on a feature and then when committing you
+had to manually paste their details for adding a Co-author to the commit?
+
+This plugin automatically fetches author details from the repo’s commit
+history and then adds it to your commit message.
+
+It shows you a list of all the unique authors in your current repo on a nice
+fuzzy searchable list.
+
+`co-author.nvim` automatically works with telescope and presents the list in a
+nice fuzzy searchable UI.
+
+Here’s a demo video <https://youtu.be/mBLLyOLwSf4?si=2Bdw900ROLp63LEg> for a
+quick walkthrough.
+
+
+INSPIRATION                                            *co-author-inspiration*
+
+Noticed something similar on a co-workers using IntelliJ, and I wanted it!
+
+
+PREREQUISITES                                        *co-author-prerequisites*
+
+Before you begin, ensure you have met the following requirements:
+
+- You have installed the latest version of `neovim`
+
+These two plugins are optional but highly recommended for a smoother user
+experience.
+
+- dressing.nvim <https://github.com/stevearc/dressing.nvim> — for prettier select UI
+- telescope <https://github.com/nvim-telescope/telescope.nvim> — for fuzzy searching in list
+
+
+INSTALLING CO-AUTHOR.NVIM                *co-author-installing-co-author.nvim*
+
+To get co-author.nvim, add the following to your plugin list:
+
+>lua
     -- Lazy
     {
         '2kabhishek/co-author.nvim',
@@ -24,38 +63,53 @@ Add the following to you lazy/packer config
             'stevearc/dressing.nvim',
             'nvim-telescope/telescope.nvim',
         },
-        cmd = 'CoAuthor',
+        cmd = {'CoAuthor'},
     },
-
+    
     -- Packer
     use '2kabhishek/co-author.nvim'
 <
 
-================================================================================
-CONFIG                                                           *co-author-config*
 
-Make sure to use neovim as your commit message editor to utilize this plugin.
+USING CO-AUTHOR.NVIM                          *co-author-using-co-author.nvim*
 
-Add the following to your shell config
-```
-export EDITOR=nvim
-```
+`co-author.nvim` adds a `:CoAuthor` command that will show you the list of
+unique co authors who have already contributed to the current git repo.
 
-================================================================================
-COMMANDS                                                       *co-author-commands*
+You can add your custom bindings for the command `:CoAuthor`, the recommended
+keybinding is `<leader>gC`.
 
-The command CoAuthor shows the list of unique commit author names and emails.
+check `:help co-author` for more details.
 
-    Example usage:
->
-    :CoAuthor
-<
 
-================================================================================
-MAPPINGS                                                       *co-author-mappings*
+  NOTE: By default there are no configured keybindings.
 
-Recommended keybinding for showing the author list is `<leader>gC`
-By default there are no keybindings set.
+HOW IT WAS BUILT                                  *co-author-how-it-was-built*
 
-================================================================================
+co-author.nvim was built using `neovim, lua`
 
+
+CHALLENGES FACED                                  *co-author-challenges-faced*
+
+Figuring out vim’s rtp was tricky initially.
+
+
+WHAT I LEARNED                                      *co-author-what-i-learned*
+
+- Learned about nvim plugin ecosystem
+- Explored vim APIs
+
+
+WHAT’S NEXT                                        *co-author-what’s-next*
+
+You tell me!
+
+Hit the button if you found this useful.
+
+
+MORE INFO                                                *co-author-more-info*
+
+
+Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
+
+vim:tw=78:ts=8:noet:ft=help:norl:
