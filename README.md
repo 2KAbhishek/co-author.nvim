@@ -51,9 +51,6 @@ Noticed something similar on a co-workers using IntelliJ, and I wanted it!
 Before you begin, ensure you have met the following requirements:
 
 - You have installed the latest version of `neovim`
-
-These two plugins are optional but highly recommended for a smoother user experience.
-
 - [snacks.nvim picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) — for prettier select UI
 
 ## Installing co-author.nvim
