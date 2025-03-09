@@ -23,7 +23,7 @@
 <h3>Quickly add co-authors to commits 💻🪄</h3>
 
 <figure>
-  <img src= "images/screenshot.png" alt="co-author.nvim Demo">
+  <img src= "doc/images/screenshot.png" alt="co-author.nvim Demo">
   <br/>
   <figcaption>co-author.nvim screenshot</figcaption>
 </figure>
@@ -38,9 +38,9 @@ This plugin automatically fetches author details from the repo's commit history 
 
 It shows you a list of all the unique authors in your current repo on a nice fuzzy searchable list.
 
-`co-author.nvim` automatically works with telescope and presents the list in a nice fuzzy searchable UI.
+`co-author.nvim` automatically works with configured pickers and presents the list in a fuzzy searchable UI.
 
-Here's a [demo video](https://youtu.be/mBLLyOLwSf4?si=2Bdw900ROLp63LEg) for a quick walkthrough.
+Here's a [demo video](https://youtu.be/mBLLyOLwSf4?si=2Bdw900ROLp63LEg) for a quick walk-through.
 
 ## Inspiration
 
@@ -54,8 +54,7 @@ Before you begin, ensure you have met the following requirements:
 
 These two plugins are optional but highly recommended for a smoother user experience.
 
-- [dressing.nvim](https://github.com/stevearc/dressing.nvim) — for prettier select UI
-- [telescope](https://github.com/nvim-telescope/telescope.nvim) — for fuzzy searching in list
+- [snacks.nvim picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) — for prettier select UI
 
 ## Installing co-author.nvim
 
@@ -66,8 +65,7 @@ To get co-author.nvim, add the following to your plugin list:
 {
     '2kabhishek/co-author.nvim',
     dependencies = {
-        'stevearc/dressing.nvim',
-        'nvim-telescope/telescope.nvim',
+        'folke/snacks.nvim',
     },
     cmd = {'CoAuthor'},
 },
