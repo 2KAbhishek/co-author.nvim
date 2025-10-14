@@ -27,15 +27,18 @@ co_author.list = function()
         for _, author in ipairs(co_authors) do
             items[#items + 1] = { text = author }
         end
-        
+
         snacks.picker.pick({
             items = items,
             format = 'text',
+            layout = {
+                preset = "select"
+            },
             prompt = 'Select Co-Author(s) (use <Tab> to multi-select)',
             confirm = function(picker, item)
                 local selected = picker:selected({ fallback = true })
                 picker:close()
-                
+
                 if #selected > 0 then
                     local co_author_lines = {}
                     for _, selected_item in ipairs(selected) do
@@ -52,7 +55,7 @@ co_author.list = function()
         for _, author in ipairs(co_authors) do
             items[#items + 1] = author
         end
-        
+
         vim.ui.select(items, { prompt = 'Select Co-Author' }, function(item, _)
             if item ~= nil then
                 local co_authot_string = 'Co-authored-by: ' .. item
