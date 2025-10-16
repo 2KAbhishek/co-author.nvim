@@ -75,7 +75,7 @@ unique co authors who have already contributed to the current git repo.
 multiple co-authors at once:
 
 - Use `<Tab>` to select/deselect individual authors
-- Use `<Ctrl-a>` to select all authors
+- Use `<Ctrl-a>` to select all authors on a filtered list
 - Use `<Enter>` to confirm your selection
 
 If snacks.nvim is not available, it will fallback to the built-in
