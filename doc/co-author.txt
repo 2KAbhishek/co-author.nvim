@@ -43,7 +43,7 @@ PREREQUISITES                                        *co-author-prerequisites*
 Before you begin, ensure you have met the following requirements:
 
 - You have installed the latest version of `neovim`
-- snacks.nvim picker <https://github.com/folke/snacks.nvim/blob/main/docs/picker.md> — for prettier select UI
+- snacks.nvim picker <https://github.com/folke/snacks.nvim/blob/main/docs/picker.md> — for prettier select UI and multi select (optional, recommended)
 
 
 INSTALLING CO-AUTHOR.NVIM                *co-author-installing-co-author.nvim*
