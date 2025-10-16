@@ -10,7 +10,7 @@ local function multi_select(co_authors, snacks)
         items = items,
         format = 'text',
         layout = {
-            preset = "select"
+            preset = 'select',
         },
         title = 'Select Co-Author(s)',
         confirm = function(picker, item)
@@ -25,7 +25,7 @@ local function multi_select(co_authors, snacks)
                 end
                 vim.api.nvim_put(co_author_lines, 'c', true, true)
             end
-        end
+        end,
     })
 end
 
