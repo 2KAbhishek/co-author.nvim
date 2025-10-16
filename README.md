@@ -79,7 +79,7 @@ use '2kabhishek/co-author.nvim'
 **Multi-select Support**: When using with [snacks.nvim picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md), you can select multiple co-authors at once:
 
 - Use `<Tab>` to select/deselect individual authors
-- Use `<Ctrl-a>` to select all authors
+- Use `<Ctrl-a>` to select all authors on a filtered list
 - Use `<Enter>` to confirm your selection
 
 If snacks.nvim is not available, it will fallback to the built-in `vim.ui.select` for single selection.
