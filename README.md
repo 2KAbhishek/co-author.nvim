@@ -76,6 +76,14 @@ use '2kabhishek/co-author.nvim'
 
 `co-author.nvim` adds a `:CoAuthor` command that will show you the list of unique co authors who have already contributed to the current git repo.
 
+**Multi-select Support**: When using with [snacks.nvim picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md), you can select multiple co-authors at once:
+
+- Use `<Tab>` to select/deselect individual authors
+- Use `<Ctrl-a>` to select all authors
+- Use `<Enter>` to confirm your selection
+
+If snacks.nvim is not available, it will fallback to the built-in `vim.ui.select` for single selection.
+
 You can add your custom bindings for the command `:CoAuthor`, the recommended keybinding is `<leader>gC`.
 
 check `:help co-author` for more details.

@@ -15,11 +15,47 @@ end
 
 co_author.list = function()
     local co_authors = co_author.generate()
-    local items = {}
-    for _, author in ipairs(co_authors) do
-        items[#items + 1] = author
+    if #co_authors == 0 then
+        return
     end
-    if #co_authors > 0 then
+
+    -- Check if snacks.nvim is available
+    local ok, snacks = pcall(require, 'snacks')
+    if ok and snacks.picker then
+        -- Use snacks.nvim picker with multi-select support
+        local items = {}
+        for _, author in ipairs(co_authors) do
+            items[#items + 1] = { text = author }
+        end
+
+        snacks.picker.pick({
+            items = items,
+            format = 'text',
+            layout = {
+                preset = "select"
+            },
+            prompt = 'Select Co-Author(s) (use <Tab> to multi-select)',
+            confirm = function(picker, item)
+                local selected = picker:selected({ fallback = true })
+                picker:close()
+
+                if #selected > 0 then
+                    local co_author_lines = {}
+                    for _, selected_item in ipairs(selected) do
+                        local co_author_string = 'Co-authored-by: ' .. selected_item.text
+                        table.insert(co_author_lines, co_author_string)
+                    end
+                    vim.api.nvim_put(co_author_lines, 'c', true, true)
+                end
+            end
+        })
+    else
+        -- Fallback to vim.ui.select for single selection
+        local items = {}
+        for _, author in ipairs(co_authors) do
+            items[#items + 1] = author
+        end
+
         vim.ui.select(items, { prompt = 'Select Co-Author' }, function(item, _)
             if item ~= nil then
                 local co_authot_string = 'Co-authored-by: ' .. item
